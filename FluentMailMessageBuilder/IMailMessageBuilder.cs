@@ -15,6 +15,7 @@ namespace FluentMailMessageBuilder
         IMailMessageBuilder Attach(string filePath);
         IMailMessageBuilder Attach(byte[] file, string fileName);
         IMailMessageBuilder Attach(Stream stream, string fileName);
+        IMailMessageBuilder Attach(Attachment attachment);
         MailMessage Build();
     }
 }

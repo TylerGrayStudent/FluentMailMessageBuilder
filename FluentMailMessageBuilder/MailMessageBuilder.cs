@@ -80,6 +80,12 @@ namespace FluentMailMessageBuilder
             return this;
         }
 
+        public IMailMessageBuilder Attach(Attachment attachment)
+        {
+            _mailMessage.Attachments.Add(attachment);
+            return this;
+        }
+
         public MailMessage Build()
         {
             return _mailMessage;
