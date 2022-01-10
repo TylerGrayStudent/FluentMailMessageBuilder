@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMessageBuilder", "MailMessageBuilder\MailMessageBuilder.csproj", "{D7933463-D5F9-442B-AB4B-3B42D899A661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMessageBuilderTests", "MailMessageBuilderTests\MailMessageBuilderTests.csproj", "{D9E8EA75-60C3-4168-9E77-4A820C84861C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7933463-D5F9-442B-AB4B-3B42D899A661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7933463-D5F9-442B-AB4B-3B42D899A661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7933463-D5F9-442B-AB4B-3B42D899A661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7933463-D5F9-442B-AB4B-3B42D899A661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E8EA75-60C3-4168-9E77-4A820C84861C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E8EA75-60C3-4168-9E77-4A820C84861C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E8EA75-60C3-4168-9E77-4A820C84861C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E8EA75-60C3-4168-9E77-4A820C84861C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
