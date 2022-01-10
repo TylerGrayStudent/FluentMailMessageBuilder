@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MailMessageBuilder\MailMessageBuilder.csproj" />
+      <ProjectReference Include="..\FluentMailMessageBuilder\FluentMailMessageBuilder.csproj" />
     </ItemGroup>
 
     <ItemGroup>

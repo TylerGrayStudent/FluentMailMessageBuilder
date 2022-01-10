@@ -3,7 +3,7 @@ using System.Net.Mail;
 using FluentAssertions;
 using Xunit;
 
-namespace MailMessageBuilderTests;
+namespace FluentMailMessageBuilderTests;
 
     public class UnitTests
     {
@@ -18,7 +18,7 @@ namespace MailMessageBuilderTests;
         [Fact]
         public void CreatesAnEmptyMailMessage()
         {
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().Build();
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().Build();
             var expected = new MailMessage();
             mailMessage.Should().BeEquivalentTo(expected);
         }
@@ -26,7 +26,7 @@ namespace MailMessageBuilderTests;
         [Fact]
         public void CreatesAMailMessageWithToAndSend()
         {
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().To(To).From(From)
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().To(To).From(From)
                 .Build();
             var expected = new MailMessage
             {
@@ -40,7 +40,7 @@ namespace MailMessageBuilderTests;
         public void CreatesAMailMessageWithToAndSendAndSubject()
         {
 
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().To(To).From(From).Subject(Subject)
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().To(To).From(From).Subject(Subject)
                 .Build();
             var expected = new MailMessage
             {
@@ -54,7 +54,7 @@ namespace MailMessageBuilderTests;
         [Fact]
         public void CreatesAFullyInflatedMailMessageWithRegularBody()
         {
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().To(To).From(From).Subject(Subject)
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().To(To).From(From).Subject(Subject)
                 .Body(Body).Cc(Cc).Bcc(Bcc).Build();
             var expected = new MailMessage
             {
@@ -71,7 +71,7 @@ namespace MailMessageBuilderTests;
         [Fact]
         public void CreatesAMailMessageWithHtmlBody()
         {
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().HtmlBody(HtmlBody).Build();
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().HtmlBody(HtmlBody).Build();
             var expected = new MailMessage
             {
                 Body = HtmlBody,
@@ -83,7 +83,7 @@ namespace MailMessageBuilderTests;
         [Fact]
         public void CreatesAMailMessageWithMultipleRecipients()
         {
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().To(To, Cc, Bcc).Cc(To, Cc, Bcc)
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().To(To, Cc, Bcc).Cc(To, Cc, Bcc)
                 .Bcc(To, Cc, Bcc).Build();
             var expected = new MailMessage
             {
@@ -98,7 +98,7 @@ namespace MailMessageBuilderTests;
         //[Fact]
         public void CreatesAMailMessageWithAttachmentsFromPath()
         {
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().Attach("file.txt").Build();
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().Attach("file.txt").Build();
             var expected = new MailMessage
             {
                 Attachments = {new Attachment("file.txt")}
@@ -114,7 +114,7 @@ namespace MailMessageBuilderTests;
             var fileBytes = Helpers.ReadFully(fileStream1);
             fileStream1.Close();
             var fileStream2 = File.Open("file.txt", FileMode.Open);
-            var mailMessage = new MailMessageBuilder.MailMessageBuilder().Attach(fileBytes, "file.txt").Build();
+            var mailMessage = new FluentMailMessageBuilder.MailMessageBuilder().Attach(fileBytes, "file.txt").Build();
             var expected = new MailMessage
             {
                 Attachments = {new Attachment(fileStream2, "file.txt")}

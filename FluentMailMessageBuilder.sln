@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMessageBuilder", "MailMessageBuilder\MailMessageBuilder.csproj", "{D7933463-D5F9-442B-AB4B-3B42D899A661}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentMailMessageBuilder", "FluentMailMessageBuilder\FluentMailMessageBuilder.csproj", "{D7933463-D5F9-442B-AB4B-3B42D899A661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailMessageBuilderTests", "MailMessageBuilderTests\MailMessageBuilderTests.csproj", "{D9E8EA75-60C3-4168-9E77-4A820C84861C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentMailMessageBuilderTests", "FluentMailMessageBuilderTests\FluentMailMessageBuilderTests.csproj", "{D9E8EA75-60C3-4168-9E77-4A820C84861C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

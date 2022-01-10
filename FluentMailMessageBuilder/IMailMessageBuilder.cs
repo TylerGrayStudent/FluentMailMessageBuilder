@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Net.Mail;
 
-namespace MailMessageBuilder
+namespace FluentMailMessageBuilder
 {
     public interface IMailMessageBuilder
     {
