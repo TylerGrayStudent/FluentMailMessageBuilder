@@ -22,7 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
+      with: 
+        fetch-depth: 0
 
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
